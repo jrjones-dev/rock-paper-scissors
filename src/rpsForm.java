@@ -3,7 +3,7 @@ import java.awt.event.WindowEvent;
 
 /*
     This program was made and coded by Jesse Jones
-    On June 10th
+    On June 10th, 2024
     To create a Rock Paper Scissors game for children to enjoy
 */
 public class rpsForm extends javax.swing.JFrame {

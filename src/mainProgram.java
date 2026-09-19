@@ -11,7 +11,7 @@ import java.time.Instant;
 
 /*
     This program was made and coded by Jesse Jones
-    On June 10th
+    On June 10th, 2024
     To create a Rock Paper Scissors game for children to enjoy
 */
 
@@ -169,7 +169,7 @@ public class mainProgram extends javax.swing.JFrame {
         outputArea.setText("");
 
         // Initiating values
-        String rpcInput = (rpcTextField.getText()).toLowerCase();
+        String rpcInput = (rpcTextField.getText()).trim().toLowerCase();
         String computerChoice = generateComputerChoice();
         
         if (rpcInput.isEmpty()) {
