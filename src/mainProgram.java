@@ -227,7 +227,10 @@ public class mainProgram extends javax.swing.JFrame {
             int timeBonus = calculateTimeBonus(gameDurationMillis);
             
             // Update player score with time bonus
-            playerTotalScore += timeBonus;
+            playerTotalScore = playerWins * 500;
+            if (playerWins > computerWins) {
+                playerTotalScore += timeBonus;
+            }
             
             // Update scores and win counts
             outputArea.append("Player Wins: " + playerWins + " | Player Score: " + playerTotalScore + "\nComputer Wins: " + computerWins);
