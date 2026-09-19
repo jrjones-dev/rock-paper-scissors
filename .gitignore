@@ -10,4 +10,4 @@ nbproject/private/
 .DS_Store
 
 # Files the game generates when you play
-highscores.txt
+highscore.txt

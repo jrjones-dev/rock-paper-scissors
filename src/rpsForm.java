@@ -94,7 +94,7 @@ public class rpsForm extends javax.swing.JFrame {
 
     
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
-        // Takes user back to previous page
+        // Closes the title screen and opens the game window
         close();
         mainProgram mp = new mainProgram();
         mp.setVisible(true);
