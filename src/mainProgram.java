@@ -186,7 +186,7 @@ public class mainProgram extends javax.swing.JFrame {
         }
         
         // Start timer if it's the first round
-        if (roundsPlayed == 0) {
+        if (startTime == null) {
             startTime = Instant.now();
         }
         
@@ -255,6 +255,7 @@ public class mainProgram extends javax.swing.JFrame {
             
             // Reset rounds played and other game variables for next game
             roundsPlayed = 0;
+            startTime = null;
             playerWins = 0;
             computerWins = 0;
             playerTotalScore = 0;
