@@ -1,0 +1,13 @@
+# NetBeans
+build/
+dist/
+nbproject/private/
+
+# Java
+*.class
+
+# macOS
+.DS_Store
+
+# Files the game generates when you play
+highscores.txt
