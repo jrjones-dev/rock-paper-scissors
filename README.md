@@ -31,7 +31,7 @@ Type `rock`, `paper`, or `scissors` and press **Shoot!**. Play five rounds and t
 
 ## Ideas for improvement
 
-- Replace typed input with buttons
+- Add functionality for enter key on choices text box.
 
 ## Author
 
