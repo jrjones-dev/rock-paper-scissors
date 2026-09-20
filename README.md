@@ -27,11 +27,12 @@ Requires Java 8 or newer and Apache NetBeans (built and tested with JDK 25).
 
 ## How to play
 
-Type `rock`, `paper`, or `scissors` and press **Shoot!**. Play five rounds and try to beat your high score.
+Type `rock`, `paper`, or `scissors` and press **Shoot!** or hit Enter. Play five rounds and try to beat your high score.
 
 ## Ideas for improvement
 
 - Add functionality for enter key on choices text box.
+- Add a "Try Again" button to easily reset rounds.
 
 ## Author
 
