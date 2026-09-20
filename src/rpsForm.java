@@ -6,12 +6,12 @@ import java.awt.event.WindowEvent;
     On June 10th, 2024
     To create a Rock Paper Scissors game for children to enjoy
 */
-public class rpsForm extends javax.swing.JFrame {
+public class RpsForm extends javax.swing.JFrame {
 
     /**
      * Creates new form rpsForm
      */
-    public rpsForm() {
+    public RpsForm() {
         initComponents();
     }
 
@@ -82,7 +82,6 @@ public class rpsForm extends javax.swing.JFrame {
         backgroundArea.setAutoscrolls(false);
         backgroundArea.setEnabled(false);
         scroll.setViewportView(backgroundArea);
-        backgroundArea.getAccessibleContext().setAccessibleParent(null);
 
         getContentPane().add(scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 360, 300));
 
@@ -96,7 +95,7 @@ public class rpsForm extends javax.swing.JFrame {
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         // Closes the title screen and opens the game window
         close();
-        mainProgram mp = new mainProgram();
+        MainProgram mp = new MainProgram();
         mp.setVisible(true);
     }//GEN-LAST:event_startButtonActionPerformed
 
@@ -122,20 +121,21 @@ public class rpsForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(rpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(rpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(rpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(rpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RpsForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new rpsForm().setVisible(true);
+                new RpsForm().setVisible(true);
             }
         });
     }

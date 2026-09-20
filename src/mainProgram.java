@@ -15,7 +15,7 @@ import java.time.Instant;
     To create a Rock Paper Scissors game for children to enjoy
 */
 
-public class mainProgram extends javax.swing.JFrame {
+public class MainProgram extends javax.swing.JFrame {
 
     // Global variables
     private String[] choices = {"rock", "paper", "scissors"};
@@ -32,7 +32,7 @@ public class mainProgram extends javax.swing.JFrame {
     private int highScore = 0;
     private Instant startTime;
     
-    public mainProgram() {
+    public MainProgram() {
         initComponents();
         
         getRootPane().setDefaultButton(playButton);  // Enter now triggers "Shoot!"
@@ -173,7 +173,7 @@ public class mainProgram extends javax.swing.JFrame {
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // Takes user back to previous page
         close();
-        rpsForm rps = new rpsForm();
+        RpsForm rps = new RpsForm();
         rps.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
@@ -360,20 +360,21 @@ public class mainProgram extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainProgram.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mainProgram().setVisible(true);
+                new MainProgram().setVisible(true);
             }
         });
     }
