@@ -68,6 +68,7 @@ public class mainProgram extends javax.swing.JFrame {
         playButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
+        tryAgainButton = new javax.swing.JButton();
         backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -147,6 +148,16 @@ public class mainProgram extends javax.swing.JFrame {
             }
         });
         getContentPane().add(exitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 110, -1));
+
+        tryAgainButton.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        tryAgainButton.setForeground(new java.awt.Color(51, 204, 0));
+        tryAgainButton.setText("Try Again");
+        tryAgainButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tryAgainButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tryAgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 110, 30));
 
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background.png"))); // NOI18N
         getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, -1));
@@ -260,16 +271,23 @@ public class mainProgram extends javax.swing.JFrame {
             displayRoundDetails(playerChoices, computerChoices, roundResults);
             
             // Reset rounds played and other game variables for next game
-            roundsPlayed = 0;
-            startTime = null;
-            playerWins = 0;
-            computerWins = 0;
-            playerTotalScore = 0;
+            resetGame();
         }
         
         // Clears input
         rpcTextField.setText("");
     }//GEN-LAST:event_playButtonActionPerformed
+
+    private void tryAgainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainButtonActionPerformed
+        // Reset the current game but keep the high score
+        resetGame();
+
+        // Reset the screen
+        outputArea.setText("");
+        rpcTextField.setText("");
+        scoreTextField.setText("High Score: " + highScore);
+        rpcTextField.requestFocusInWindow();
+    }//GEN-LAST:event_tryAgainButtonActionPerformed
 
     private String generateComputerChoice() {
         int comIndex = random.nextInt(choices.length);
@@ -315,6 +333,14 @@ public class mainProgram extends javax.swing.JFrame {
         } catch (IOException e) {
             outputArea.append("\nCan't write to external file.");
         }
+    }
+    
+    private void resetGame() {
+        roundsPlayed = 0;
+        playerWins = 0;
+        computerWins = 0;
+        playerTotalScore = 0;
+        startTime = null;
     }
     
     /**
@@ -364,5 +390,6 @@ public class mainProgram extends javax.swing.JFrame {
     private javax.swing.JTextField scoreTextField;
     private javax.swing.JScrollPane scroll2;
     private javax.swing.JTextArea standOutArea;
+    private javax.swing.JButton tryAgainButton;
     // End of variables declaration//GEN-END:variables
 }
