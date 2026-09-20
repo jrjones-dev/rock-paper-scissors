@@ -35,6 +35,8 @@ public class mainProgram extends javax.swing.JFrame {
     public mainProgram() {
         initComponents();
         
+        getRootPane().setDefaultButton(playButton);  // Enter now triggers "Shoot!"
+        
         // Load the high score when the program starts
         loadHighScore();
         
@@ -165,6 +167,9 @@ public class mainProgram extends javax.swing.JFrame {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
+        // Refocuses on text box so player can type again without having to click the box.
+        rpcTextField.requestFocusInWindow();
+
         // Clearing previous output
         outputArea.setText("");
 
@@ -249,8 +254,6 @@ public class mainProgram extends javax.swing.JFrame {
                 outputArea.append("\n\nGame Over! You won the game with " + playerWins + " wins! \nEnter your choice again to start another game.");
             } else if (computerWins > playerWins) {
                 outputArea.append("\n\nGame Over! The computer won the game with " + computerWins + " wins. \nEnter your choice again to start another game.");
-            } else {
-                outputArea.append("\n\nGame Over! It's a tie with " + playerWins + " wins each. \nEnter your choice again to start another game.");
             }
             
             // Display round details
